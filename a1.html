@@ -1,0 +1,82 @@
+<!-- 
+ Author: Carlos Osorio
+ Student #: 211 841 558
+ Course: EECS 3461 F 2019
+ Assignment: 1 
+-->
+
+<!DOCTYPE html>
+<html lang="En">
+    <head>
+        <meta charset="UTF-8">
+        <title>Casio FX-2500</title>
+        <link rel="stylesheet" typr="text/css" href="a1.css">
+        <script type="text/javascript" src="a1.js"></script>
+    </head>
+    <body>
+        <div id="outline">
+            <div id="inner_outline">
+                <div id="display_outline">
+                    <div id="display">
+                    </div>
+                </div>
+                <div id="hr_and_name_container">
+                    <div id="hr_container">
+                        <hr>
+                    </div>
+                    <div id="name_container">
+                        <p><span id="one">CASIO</span>
+                           <span id="two">fx-2500</span>
+                           <span id="three">SCIENTIFIC CALCULATOR</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="small_buttons_grid_background">
+                    <div id="small_buttons_grid_container">
+                        <div class="small_button_container">ON/OFF<br><button class="small_button" type="button" onclick="onOff()"></button></div>
+                        <div class="small_button_container inv">INV<br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">MODE<br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container power">log&emsp;<span class="inv">10<sup>x</sup></span><br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container power">ln&emsp;<span class="inv big"><i>e</span><span class="inv"><sup>x</i></sup></span><br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container power">X<sup>y</sup>&emsp;<span class="inv"><i>X</span><span class="inv"><sup>1/y</i></sup></span><br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">+/-<br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">&#8730;&emsp;<span class="inv">X<sup>2</sup></span><br><button class="small_button" type="button" onclick="sqrtRootOf()"></button></div>
+                        <div class="small_button_container">,,,<br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">sin&ensp;<span class="inv"><sup>-1</sup></span><br><button class="small_button" type="button" onclick="sineOf()"></button></div>
+                        <div class="small_button_container">cos&ensp;<span class="inv"><sup>-1</sup></span><br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">tan&ensp;<span class="inv"><sup>-1</sup></span><br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">1/X&emsp;<span class="inv">X!</span><br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">X&#8596;Y <span class="inv">M</span><br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">[{<br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">}]<br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">M in<br><button class="small_button" type="button"></button></div>
+                        <div class="small_button_container">MR<br><button class="small_button" type="button"></button></div>
+                    </div>
+                </div>
+                <div id="big_buttons_grid_container">
+                    <div class="big_button_container"><button class="big_button" id="7" type="button" onclick="display(this)">7</button></div>
+                    <div class="big_button_container"><button class="big_button" id="8" type="button" onclick="display(this)">8</button></div>
+                    <div class="big_button_container"><button class="big_button" id="9" type="button" onclick="display(this)">9</button></div>
+                    <div class="big_button_container"><button class="big_button word" type="button" onclick="clearScreen()">C</button></div>
+                    <div class="big_button_container"><button class="big_button word" type="button" onclick="clearScreen()">AC</button><br><span class="inv under">SAC</span></div>
+                    <div class="big_button_container"><button class="big_button" id="4" type="button" onclick="display(this)">4</button></div>
+                    <div class="big_button_container"><button class="big_button" id="5" type="button" onclick="display(this)">5</button></div>
+                    <div class="big_button_container"><button class="big_button" id="6" type="button" onclick="display(this)">6</button></div>
+                    <div class="big_button_container"><button class="big_button" type="button" onclick="operation(this)">x</button></div>
+                    <div class="big_button_container"><button class="big_button" type="button" onclick="operation(this)">&#247;</button></div>
+                    <div class="big_button_container"><button class="big_button" id="1" type="button" onclick="display(this)">1</button></div>
+                    <div class="big_button_container"><button class="big_button" id="2" type="button" onclick="display(this)">2</button></div>
+                    <div class="big_button_container"><button class="big_button" id="3" type="button" onclick="display(this)">3</button></div>
+                    <div class="big_button_container"><button class="big_button" type="button" onclick="operation(this)">+</button></div>
+                    <div class="big_button_container"><button class="big_button" type="button" onclick="operation(this)">-</button></div>
+                    <div class="big_button_container"><button class="big_button" id="0" type="button" onclick="display(this)">0</button></div>
+                    <div class="big_button_container"><button class="big_button" id="dot" type="button" onclick="display(this)">.</button></div>
+                    <div class="big_button_container"><button class="big_button word" type="button">EXP</button></div>
+                    <div class="big_button_container"><button class="big_button" type="button" onclick="compute()">=</button></div>
+                    <div class="big_button_container"><button class="big_button word" type="button">M+</button><br><span class="inv under">DEL</span></div>
+                </div>
+            </div>
+        </div>
+        <footer>&copy; Author: Carlos Osorio</footer>
+    </body>
+</html>
